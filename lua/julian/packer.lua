@@ -7,6 +7,7 @@ return require('packer').startup(function(use)
 	-- Packer can manage itself
 
 	use 'wbthomason/packer.nvim'
+	use 'mhartington/formatter.nvim'
 	use 'voldikss/vim-floaterm'
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.8',

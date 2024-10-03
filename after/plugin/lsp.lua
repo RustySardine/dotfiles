@@ -31,8 +31,8 @@ require("mason-lspconfig").setup({
 		"lua_ls",
 		"rust_analyzer",
 		"gopls",
-		"lexical",
-		"ocamllsp",
+
+
 		"clangd",
 
 	},
@@ -43,17 +43,9 @@ require("mason-lspconfig").setup({
 			}
 		end,
 
-		["lexical"] = function ()
-			local lspconfig = require("lspconfig")
-			lspconfig.lexical.setup{}
-		end,
 		["clangd"] = function ()
 			local lspconfig = require("lspconfig")
 			lspconfig.clangd.setup{}
-		end,
-		["ocamllsp"] = function()
-			local lspconfig = require("lspconfig")
-			lspconfig.ocamllsp.setup{}
 		end,
 		["rust_analyzer"] = function ()
 			local lspconfig = require("lspconfig")
