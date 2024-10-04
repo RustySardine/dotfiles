@@ -1,5 +1,5 @@
-require'nvim-treesitter.configs'.setup {
-	ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" , "rust", "go", "yaml" },
+require("nvim-treesitter.configs").setup({
+	ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "rust", "go", "yaml" },
 
 	sync_install = false,
 
@@ -10,4 +10,4 @@ require'nvim-treesitter.configs'.setup {
 
 		additional_vim_regex_highlighting = false,
 	},
-}
+})

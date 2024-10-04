@@ -5,8 +5,23 @@ vim.cmd([[packadd packer.nvim]])
 
 return require("packer").startup(function(use)
 	-- Packer can manage itself
-
+	use("CRAG666/code_runner.nvim")
 	use("wbthomason/packer.nvim")
+	use({
+		"folke/twilight.nvim",
+		config = function()
+			require("twilight").setup({
+				alpha = 0.9,
+			})
+		end,
+	})
+	use({
+		"stevearc/oil.nvim",
+		config = function()
+			require("oil").setup()
+		end,
+	})
+
 	use({
 		"stevearc/conform.nvim",
 		config = function()
