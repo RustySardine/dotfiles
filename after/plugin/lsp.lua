@@ -47,8 +47,9 @@ require("mason-lspconfig").setup({
 		"lua_ls",
 		"rust_analyzer",
 		"gopls",
-
+		"zls",
 		"clangd",
+		"pylsp",
 	},
 	handlers = {
 		function(server_name)
@@ -56,10 +57,17 @@ require("mason-lspconfig").setup({
 				capabilities = capabilities,
 			})
 		end,
-
+		["pylsp"] = function()
+			local lspconfig = require("lspconfig")
+			lspconfig.pylsp.setup({})
+		end,
 		["clangd"] = function()
 			local lspconfig = require("lspconfig")
 			lspconfig.clangd.setup({})
+		end,
+		["zls"] = function()
+			local lspconfig = require("lspconfig")
+			lspconfig.zls.setup({})
 		end,
 		["rust_analyzer"] = function()
 			local lspconfig = require("lspconfig")
